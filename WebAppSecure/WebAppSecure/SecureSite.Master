@@ -20,14 +20,24 @@
 
             <table class="auto-style1">
                 <tr>
-                    <td colspan="2"><h1>Simple Security Example</h1></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td colspan="4"><h1>Simple Security Example</h1></td>
                 </tr>
                 <tr>
                     <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Secure/SecurePage.aspx">Secure</asp:HyperLink>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
                         <asp:LoginView ID="LoginView1" runat="server">
                             <AnonymousTemplate>
                                 Welcome Guest!!!
@@ -40,8 +50,8 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>
-                        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                    <td colspan="3">
+                        <asp:LoginStatus ID="SignInStatus1" runat="server" LoginText="SignIn" LogoutText="SignOut" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>

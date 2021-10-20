@@ -1,0 +1,30 @@
+﻿body {
+    background-color:lightgoldenrodyellow;
+    color:darkblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:1.1em;
+}
+h1, h2 {
+    text-align:center;
+    background-color:white;
+    color:darkmagenta;
+}
+.header {
+    position:absolute;
+    top:2%;
+    left:2%;
+    right:2%;
+    height:26%;
+    width:96%;
+    background-color:lightcyan;
+    
+}
+.main {
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    right: 2%;
+    width: 96%;
+    height: 100%;
+    background-color:white;
+}

@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SecureSiteTemplate.master.cs" Inherits="WebRoleBasedSecurity.SecureSiteTemplate" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="SecureStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            position: absolute;
+            top: 2%;
+            left: 2%;
+            right: 2%;
+            height: 25%;
+            width: 96%;
+            background-color: lightcyan;
+        }
+        .auto-style3 {
+            height: 56px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <table class="auto-style1">
+                <tr>
+                    <td colspan="7" class="auto-style3"><h1>Role Based Security in ASP.NET </h1></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <AnonymousTemplate>
+                                Welcome Guest
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                Welcome
+                                <asp:LoginName ID="LoginName1" runat="server" />
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </td>
+                    <td>
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="SignIn" LogoutAction="Redirect" LogoutText="SignOut" LogoutPageUrl="~/SignOut.aspx" />
+                    </td>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Admin/AHome.aspx">Admin</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Emp/EHome.aspx">Emp</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Users/Users.aspx">Users</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td colspan="2">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
