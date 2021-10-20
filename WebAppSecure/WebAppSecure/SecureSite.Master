@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SecureSite.master.cs" Inherits="WebAppSecure.SecureSite" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="SecureStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="topPanel">
+
+            <table class="auto-style1">
+                <tr>
+                    <td colspan="2"><h1>Simple Security Example</h1></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <AnonymousTemplate>
+                                Welcome Guest!!!
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                Hi!!!<asp:LoginName ID="LoginName1" runat="server" />
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="mainPanel">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

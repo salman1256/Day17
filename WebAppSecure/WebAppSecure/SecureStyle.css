@@ -1,0 +1,27 @@
+﻿body {
+    background-color:lightgoldenrodyellow;
+    color:darkmagenta;
+}
+.topPanel {
+    position:absolute;
+    top:5%;
+    left:5%;
+    right:5%;
+    width:90%;
+    height:25%;
+    background-color:white;
+    color:darkblue;
+}
+.mainPanel {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 60%;
+    background-color: lightcyan;
+    color:darkmagenta;
+}
+h1, h2 {
+    text-align:center;
+}

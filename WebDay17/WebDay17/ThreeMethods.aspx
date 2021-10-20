@@ -21,7 +21,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="BtnRR" runat="server" OnClick="BtnRR_Click" Text="ResponseRedirect" />
+                <asp:Button ID="BtnRR" runat="server" OnClick="BtnRR_Click" Text="ResponseRedirect" SkinID="whitBtnSkin" />
             </td>
             <td>
                 <asp:Button ID="BtnST" runat="server" OnClick="BtnST_Click" Text="Server Transfer" />
